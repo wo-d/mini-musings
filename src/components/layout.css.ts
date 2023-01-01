@@ -6,6 +6,13 @@ export const container = style({
   fontFamily: 'sans-serif',
 });
 
+export const siteTitle = style({
+  fontSize: '3rem',
+  color: 'grey',
+  fontWeight: 700,
+  margin: '3rem 0',
+});
+
 export const heading = style({
   color: 'rebeccapurple',
 });

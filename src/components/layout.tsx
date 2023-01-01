@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import {
   container,
   heading,
   navLinkItem,
   navLinks,
   navLinkText,
+  siteTitle,
 } from './layout.css';
+import useSiteMetadata from '../hooks/useSiteMetadata';
 
 export type LayoutProps = {
   /*
@@ -27,8 +29,11 @@ const links: link[] = [
 ];
 
 const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
+  const metadata = useSiteMetadata();
+
   return (
     <div className={container}>
+      <header className={siteTitle}>{metadata.title}</header>
       <nav>
         <ul className={navLinks}>
           {links.map((link) => (

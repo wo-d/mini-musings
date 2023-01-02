@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import {
   container,
   heading,
@@ -26,6 +26,7 @@ type link = {
 const links: link[] = [
   { title: 'Home', path: '/' },
   { title: 'About', path: '/about' },
+  { title: 'Blog', path: '/blog' },
 ];
 
 const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
@@ -37,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
       <nav>
         <ul className={navLinks}>
           {links.map((link) => (
-            <li className={navLinkItem}>
+            <li className={navLinkItem} key={link.title}>
               <Link to={link.path} className={navLinkText}>
                 {link.title}
               </Link>

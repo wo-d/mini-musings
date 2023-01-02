@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css';
 
 export const container = style({
   margin: 'auto',
-  maxWidth: '500px',
+  maxWidth: '600px',
   fontFamily: 'sans-serif',
 });
 

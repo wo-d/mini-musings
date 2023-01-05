@@ -7,7 +7,7 @@ import Seo from '../components/seo';
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <p>This is my blog</p>
+      <p>Hail and well met traveler!</p>
       <StaticImage
         alt="Hail and well met traveler!"
         src="../images/hail-traveler.jpg"

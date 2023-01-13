@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import {
-  container,
-  heading,
-  navLinkItem,
-  navLinks,
-  navLinkText,
-  siteTitle,
-} from './layout.css';
+import { container, navLinkItem, navLinks, siteTitle } from './layout.css';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 
 export type LayoutProps = {
@@ -39,15 +32,14 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
         <ul className={navLinks}>
           {links.map((link) => (
             <li className={navLinkItem} key={link.title}>
-              <Link to={link.path} className={navLinkText}>
-                {link.title}
-              </Link>
+              <Link to={link.path}>{link.title}</Link>
             </li>
           ))}
         </ul>
       </nav>
+      <hr />
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1>{pageTitle}</h1>
         {children}
       </main>
     </div>

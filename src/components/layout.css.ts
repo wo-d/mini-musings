@@ -7,14 +7,9 @@ export const container = style({
 });
 
 export const siteTitle = style({
-  fontSize: '3rem',
-  color: 'grey',
+  fontSize: '4rem',
   fontWeight: 700,
-  margin: '3rem 0',
-});
-
-export const heading = style({
-  color: 'rebeccapurple',
+  margin: '2rem 0',
 });
 
 export const navLinks = style({
@@ -25,8 +20,4 @@ export const navLinks = style({
 
 export const navLinkItem = style({
   paddingRight: '2rem',
-});
-
-export const navLinkText = style({
-  color: 'black',
 });

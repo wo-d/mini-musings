@@ -25,7 +25,8 @@
     "gatsby-remark-images": "^7.3.1",
     "gatsby-source-filesystem": "^5.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.10",

@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css';
 export const container = style({
   margin: 'auto',
   maxWidth: '600px',
-  fontFamily: 'sans-serif',
+  fontFamily: 'Open Sans',
 });
 
 export const siteTitle = style({

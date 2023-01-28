@@ -2,6 +2,7 @@ import * as React from 'react';
 import Layout from '../../components/layout';
 import Seo from '../../components/seo';
 import { graphql, HeadFC, HeadProps, PageProps } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 
 type Frontmatter = {
   date: string;
@@ -18,7 +19,15 @@ const BlogPost = ({ data, children }: PageProps<DataProps>) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      {children}
+      <MDXProvider
+        components={{
+          table: (props) => (
+            <table {...props} className={'table table-hover'} />
+          ),
+        }}
+      >
+        {children}
+      </MDXProvider>
     </Layout>
   );
 };

@@ -27,6 +27,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 600,
+              wrapperStyle: 'margin-bottom: 10px',
             },
           },
         ],
@@ -37,6 +38,22 @@ const config: GatsbyConfig = {
       options: {
         name: 'blog',
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Open Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
+          },
+        ],
       },
     },
   ],
